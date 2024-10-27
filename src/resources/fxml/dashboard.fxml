@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layaout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+
+<VBox xmlns="http://javafx.com/favafx"
+	  xmlns:fx="http://javafx.com/fxml"
+	  fx:controller="com.sistema.controller.DashboardController"
+	  spacing="20">
+	  
+	  <padding>
+	  		<Insets top="20" right"20" bottom="20" left="20"/>
+	  </padding>
+	  
+	  <HBox spacing="20">
+	  		<VBox styleClass="dashboard-card" spacing="10">
+	  			<Label text="Empleados Activos" style="-fx-font-size: 16px;"/>
+	  			<Label fx:id="empleadosActivosLabel" style="-fx-font-size: 24px;"/>
+	  		</VBox>
+	  		
+	  		<VBox styleClass="dashboard-card" spacing="10">
+	  			<Label text="Liquidaciones del Mes" style="-fx-font-size: 16px;"/>
+	  			<Label fx:id="liquidacionesMesLabel" style="-fx-font-size: 24px;"/>
+	  		</VBox>
+	  		
+	  		<VBox styleClass="dashboard-card" spacing="10">
+	  			<Label text="Total Liquidado" style="-fx-font-size: 16px;"/>
+	  			<Label fx:id="totalLiquidadoLabel" style="-fx-font-size: 24px;"/>
+	  		</VBox>
+	  </HBox>
+	  
+	  <TableView fx:id="ultimasLiquidacionesTable" VBox.vgrow="ALWAYS">
+	  		<columns>
+	  			<TableColumn text="Fecha" fx:id="fechaColumn"/>
+	  			<TableColumn text="Empleado" fx:id="empleadoColumn"/>
+	  			<TableColumn text="Monto" fx:id="montoColumn"/>
+	  			<TableColumn text="Estado" fx:id="estadoColumn"/>
+	  		</columns>
+	  </TableView>
+</VBox>	 

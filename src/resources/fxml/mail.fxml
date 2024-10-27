@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layaout.*?>
+<?import javafx.scene.control.*?>
+
+<BoderPane xmlns="http://favafx.com/javafx"
+		   xmlns="http://javafx.com/fxml"
+		   fx:controller="com.sistema.comtroller.MainController">
+		   
+		   
+	<top>
+		<MenuBar>
+			<Menu text="Archivo">
+				<MenuItem text="Cerrar Sesion" onAction="#handleLogout"/>
+				<MenuItem text="Salir" onAction="#handleExit"/>
+			</Menu>
+			<Menu text="Empleados">
+				<MenuItem text="Gestioanr Empleados" onAction="#showEmpleados"/>
+				<MenuItem text="Nuevo Empleado" onAction="#nuevoEmpleado"/>
+			</Menu>
+			<Menu text="Liquidaciones">
+				<MenuItem text="Nueva Liquidacion" onAction="#nuevaLiquidacion"/>
+				<MenuItem text="Ver Liquidaciones" onAction="#verLiquidaciones"/>
+			</Menu>
+			<Menu text="Archivo">
+				<MenuItem text="Generar Reportes" onAction="#generarReporte"/>
+			</Menu>
+		</MenuBar>
+	</top>
+	
+	<center>
+		<StackPane fx:id="contentArea"/>
+	</center>		
+	
+	<Button>
+		<HBox spacing="10" style="-fx-padding: 5;">
+			<Label fx:id="statusLabel" text="Usuario: No encontrado"/>
+		</HBox>
+	</Button>
+</BorderPane>

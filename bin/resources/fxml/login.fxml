@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layaout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+
+<VBox xmlns="http://javafx.com/favafx"
+	  xmlns:fx="http://javafx.com/fxml"
+	  fx:controller="com.sistema.controller.LoginController"
+	  styleClass="login-panel"
+	  aligment="CENTER"
+	  spacing="15">
+	  
+	  <padding>
+	  		<Insets top="20" right"20" bottom="20" left="20"/>
+	  </padding>
+	  
+	  <Label text="Sistema de Liquidacion de Sueldos" style="-fx-font-size: 20px;"/>
+	  
+	  <TextField fx:id="usuarioField" promptText="Usuario"/>
+	  <PasswordField fx:id="passwordField" prompText="Contraseña"/>
+	  
+	  <Button text="Iniciar Sesion" onAction="#handLogin" defaultButton="true"/>
+	  
+	  <Label fx:id="mensajeError" textFill="RED"/>
+</VBox>	  		
